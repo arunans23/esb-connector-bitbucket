@@ -92,12 +92,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>commons-digester</groupId>
-            <artifactId>commons-digester</artifactId>
-            <version>${commons.digester.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.wso2.carbon.automation</groupId>
             <artifactId>org.wso2.carbon.automation.api</artifactId>
             <version>${test.framework.version}</version>
@@ -113,18 +107,6 @@
             <groupId>org.wso2.carbon.automation</groupId>
             <artifactId>org.wso2.carbon.automation.utils</artifactId>
             <version>${test.framework.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>${groovy.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jruby</groupId>
-            <artifactId>jruby-complete</artifactId>
-            <version>${jruby.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -144,24 +126,6 @@
             <artifactId>SecVerifier</artifactId>
             <version>${carbon.kernel.version}</version>
             <type>aar</type>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-core</artifactId>
-            <version>${activemq.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>ca.uhn.hapi.wso2</groupId>
-            <artifactId>hapi</artifactId>
-            <version>${hapi.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
