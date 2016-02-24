@@ -17,7 +17,6 @@
 ~  under the License.
 -->
 <template name="createRepository" xmlns="http://ws.apache.org/ns/synapse">
-
     <parameter name="repoSlug" description="Identifier of the repository."/>
     <parameter name="scm" description="The SCM type for the new repo. Either 'hg' or 'git'."/>
     <parameter name="name"
@@ -33,9 +32,7 @@
                description="Whether the repository should have an issue tracker (optional – defaults to false)."/>
     <parameter name="hasWiki"
                description="Whether the repository should have a wiki (optional – defaults to false)."/>
-
     <sequence>
-
         <property name="uri.var.isPrivate" expression="$func:isPrivate"/>
         <property name="uri.var.hasIssues" expression="$func:hasIssues"/>
         <property name="uri.var.hasWiki" expression="$func:hasWiki"/>
@@ -45,13 +42,11 @@
         <property name="uri.var.description" expression="$func:description"/>
         <property name="uri.var.forkingPolicy" expression="$func:forkingPolicy"/>
         <property name="uri.var.language" expression="$func:language"/>
-
         <payloadFactory media-type="json">
             <format>
                 {}
             </format>
         </payloadFactory>
-
         <script language="js">
             <![CDATA[
     		var scm = mc.getProperty('uri.var.scm');
@@ -62,7 +57,6 @@
     		var language = mc.getProperty('uri.var.language');
     		var hasIssues = mc.getProperty('uri.var.hasIssues');
     		var hasWiki = mc.getProperty('uri.var.hasWiki');
-    		
     		payload = mc.getPayloadJSON();
 			
 			if(scm != null && scm != ""){
@@ -100,13 +94,11 @@
 			mc.setPayloadJSON(payload);
     	]]>
         </script>
-
         <call>
             <endpoint>
                 <http method="post" uri-template="{uri.var.apiUrl}/{+uri.var.repoSlug}"/>
             </endpoint>
         </call>
-
         <!-- Remove response custom header information -->
         <header name="X-Frame-Options" scope="transport" action="remove"/>
         <header name="Strict-Transport-Security" scope="transport" action="remove"/>
@@ -119,6 +111,5 @@
         <header name="X-Content-Type-Options" scope="transport" action="remove"/>
         <header name="WWW-Authenticate" scope="transport" action="remove"/>
         <header name="Location" scope="transport" action="remove"/>
-
     </sequence>
 </template>

@@ -17,17 +17,13 @@
 ~  under the License.
 -->
 <template name="listCommitComments" xmlns="http://ws.apache.org/ns/synapse">
-
     <parameter name="repoSlug" description="Identifier of the repository."/>
     <parameter name="revision" description="A SHA1 value for the commit."/>
     <parameter name="commentId" description="Identifier of the comment."/>
-
     <sequence>
-
         <property name="uri.var.repoSlug" expression="$func:repoSlug"/>
         <property name="uri.var.revision" expression="$func:revision"/>
         <property name="uri.var.commentId" expression="$func:commentId"/>
-
         <!-- Changes the end points based on commentId -->
         <filter source="boolean(get-property('uri.var.commentId'))" regex="false">
             <then>
@@ -47,7 +43,6 @@
                 </call>
             </else>
         </filter>
-
         <!-- Remove response custom header information -->
         <header name="X-Frame-Options" scope="transport" action="remove"/>
         <header name="Strict-Transport-Security" scope="transport" action="remove"/>
@@ -60,6 +55,5 @@
         <header name="X-Content-Type-Options" scope="transport" action="remove"/>
         <header name="WWW-Authenticate" scope="transport" action="remove"/>
         <header name="Location" scope="transport" action="remove"/>
-
     </sequence>
 </template>

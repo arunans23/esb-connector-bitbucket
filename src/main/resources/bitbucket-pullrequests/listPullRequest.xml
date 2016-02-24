@@ -17,16 +17,12 @@
 ~  under the License.
 -->
 <template name="listPullRequest" xmlns="http://ws.apache.org/ns/synapse">
-
     <parameter name="repoSlug" description="Identifier of the repository."/>
     <parameter name="state"
                description="The pull request's current status. The status is either OPEN, MERGED or DECLINED"/>
-
     <sequence>
-
         <property name="uri.var.repoSlug" expression="$func:repoSlug"/>
         <property name="uri.var.state" expression="$func:state"/>
-
         <filter source="boolean(get-property('uri.var.state'))" regex="false">
             <then>
                 <call>
@@ -45,7 +41,6 @@
                 </call>
             </else>
         </filter>
-
         <!-- Remove response custom header information -->
         <header name="X-Frame-Options" scope="transport" action="remove"/>
         <header name="Strict-Transport-Security" scope="transport" action="remove"/>
@@ -58,6 +53,5 @@
         <header name="X-Content-Type-Options" scope="transport" action="remove"/>
         <header name="WWW-Authenticate" scope="transport" action="remove"/>
         <header name="Location" scope="transport" action="remove"/>
-
     </sequence>
 </template>

@@ -17,22 +17,17 @@
 ~  under the License.
 -->
 <template name="listPullRequestComments" xmlns="http://ws.apache.org/ns/synapse">
-
     <parameter name="repoSlug" description="Identifier of the repository."/>
     <parameter name="pullRequestId" description="The pull request identifier."/>
-
     <sequence>
-
         <property name="uri.var.repoSlug" expression="$func:repoSlug"/>
         <property name="uri.var.pullRequestId" expression="$func:pullRequestId"/>
-
         <call>
             <endpoint>
                 <http method="get"
                       uri-template="{uri.var.apiUrl}/{+uri.var.repoSlug}/pullrequests/{uri.var.pullRequestId}/comments"/>
             </endpoint>
         </call>
-
         <!-- Remove response custom header information -->
         <header name="X-Frame-Options" scope="transport" action="remove"/>
         <header name="Strict-Transport-Security" scope="transport" action="remove"/>
@@ -45,6 +40,5 @@
         <header name="X-Content-Type-Options" scope="transport" action="remove"/>
         <header name="WWW-Authenticate" scope="transport" action="remove"/>
         <header name="Location" scope="transport" action="remove"/>
-
     </sequence>
 </template>
