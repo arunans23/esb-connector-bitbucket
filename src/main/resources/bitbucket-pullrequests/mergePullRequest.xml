@@ -42,13 +42,10 @@
             <![CDATA[
 			//payload variables
 			var closeSourceBranch = mc.getProperty("uri.var.closeSourceBranch");
-			
 			payload = mc.getPayloadJSON();
-						
 			if (closeSourceBranch != null && closeSourceBranch != "") {
-				payload.closeSourceBranch = eval("(" + closeSourceBranch + ")");
+			payload.closeSourceBranch = eval("(" + closeSourceBranch + ")");
 			}
-			
 			mc.setPayloadJSON(payload);	
 		    ]]>
         </script>

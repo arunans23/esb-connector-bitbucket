@@ -42,16 +42,14 @@
 	                payload = mc.getPayloadJSON();               
 	                var include = mc.getProperty("uri.var.include"); 
 	                var exclude = mc.getProperty("uri.var.exclude");
-				
 					if(include != null && include != ""){
-						payload.include = include;
+					payload.include = include;
 					}
-					
 					if(exclude != null && exclude != ""){
-						payload.exclude = exclude;
+					payload.exclude = exclude;
 					}
-		          	 mc.setPayloadJSON(payload);                                     
-               ]]>
+		          	mc.setPayloadJSON(payload);
+                    ]]>
                 </script>
                 <filter
                         xpath="((string(get-property('include'))) and get-property('include') != '') or

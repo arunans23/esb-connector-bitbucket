@@ -58,41 +58,32 @@
     		var hasIssues = mc.getProperty('uri.var.hasIssues');
     		var hasWiki = mc.getProperty('uri.var.hasWiki');
     		payload = mc.getPayloadJSON();
-			
 			if(scm != null && scm != ""){
-				payload.scm = scm;
+			payload.scm = scm;
 			}
-			
 			if(name != null && name != ""){
-				payload.name = name;
+			payload.name = name;
 			}
-			
 			if(isPrivate != null && isPrivate != ""){
-				payload.is_private = isPrivate;
+			payload.is_private = isPrivate;
 			}
-			
 			if(description != null && description != ""){
-				payload.description = description;
-			}	
-						
+			payload.description = description;
+			}
 			if(forkingPolicy != null && forkingPolicy != ""){
-				payload.fork_policy = forkingPolicy;
+			payload.fork_policy = forkingPolicy;
 			}
-			
 			if(language != null && language != ""){
-				payload.language = language;
+			payload.language = language;
 			}
-			
 			if(hasIssues != null && hasIssues != ""){
-				payload.has_issues = hasIssues;
+			payload.has_issues = hasIssues;
 			}
-			
 			if(hasWiki != null && hasWiki != ""){
-				payload.has_wiki = hasWiki;
+			payload.has_wiki = hasWiki;
 			}
-			
 			mc.setPayloadJSON(payload);
-    	]]>
+    	    ]]>
         </script>
         <call>
             <endpoint>

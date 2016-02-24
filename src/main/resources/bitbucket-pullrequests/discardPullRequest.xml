@@ -35,10 +35,10 @@
     		var message = mc.getProperty('uri.var.message');
     		payload = mc.getPayloadJSON();
 			if(message != null && message != ""){
-				payload.message = message;
+			payload.message = message;
 			}
 			mc.setPayloadJSON(payload);
-    	]]>
+    	    ]]>
         </script>
         <call>
             <endpoint>
