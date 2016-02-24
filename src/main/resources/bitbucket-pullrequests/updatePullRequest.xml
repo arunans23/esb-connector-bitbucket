@@ -50,29 +50,29 @@
         <!--Construct payload for optional parameters -->
         <script language="js">
             <![CDATA[
-	  		payload = mc.getPayloadJSON();
-			var description = mc.getProperty("uri.var.description");
-			var destination = mc.getProperty("uri.var.destination");
-			var source = mc.getProperty("uri.var.source");
-			var reviewers = mc.getProperty("uri.var.reviewers");
-			var closeSourceBranch = mc.getProperty("uri.var.closeSourceBranch");
-			if ( description != null && description != "") {
-			payload.description = description ;
-			}
-			if ( destination != null && destination != "") {
-			payload.destination = eval("("+destination+")");
-			}
-			if ( source != null && source != "") {
-			payload.source = eval("("+source+")");
-			}
-			if ( reviewers != null && reviewers != "") {
-			payload.reviewers = eval("("+reviewers+")");
-			}
-			if ( closeSourceBranch != null && closeSourceBranch != "") {
-			payload.close_source_branch = closeSourceBranch;
-			}
-			mc.setPayloadJSON(payload);
-			]]>
+            payload = mc.getPayloadJSON();
+            var description = mc.getProperty("uri.var.description");
+            var destination = mc.getProperty("uri.var.destination");
+            var source = mc.getProperty("uri.var.source");
+            var reviewers = mc.getProperty("uri.var.reviewers");
+            var closeSourceBranch = mc.getProperty("uri.var.closeSourceBranch");
+            if ( description != null && description != "") {
+            payload.description = description ;
+            }
+            if ( destination != null && destination != "") {
+            payload.destination = eval("("+destination+")");
+            }
+            if ( source != null && source != "") {
+            payload.source = eval("("+source+")");
+            }
+            if ( reviewers != null && reviewers != "") {
+            payload.reviewers = eval("("+reviewers+")");
+            }
+            if ( closeSourceBranch != null && closeSourceBranch != "") {
+            payload.close_source_branch = closeSourceBranch;
+            }
+            mc.setPayloadJSON(payload);
+            ]]>
         </script>
         <log>
             <property name="json payload" expression="json-eval($.)"/>

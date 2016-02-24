@@ -49,41 +49,41 @@
         </payloadFactory>
         <script language="js">
             <![CDATA[
-    		var scm = mc.getProperty('uri.var.scm');
-    		var name = mc.getProperty('uri.var.name');    		
-    		var isPrivate = mc.getProperty('uri.var.isPrivate');
-    		var description = mc.getProperty('uri.var.description');
-    		var forkingPolicy = mc.getProperty('uri.var.forkingPolicy');
-    		var language = mc.getProperty('uri.var.language');
-    		var hasIssues = mc.getProperty('uri.var.hasIssues');
-    		var hasWiki = mc.getProperty('uri.var.hasWiki');
-    		payload = mc.getPayloadJSON();
-			if(scm != null && scm != ""){
-			payload.scm = scm;
-			}
-			if(name != null && name != ""){
-			payload.name = name;
-			}
-			if(isPrivate != null && isPrivate != ""){
-			payload.is_private = isPrivate;
-			}
-			if(description != null && description != ""){
-			payload.description = description;
-			}
-			if(forkingPolicy != null && forkingPolicy != ""){
-			payload.fork_policy = forkingPolicy;
-			}
-			if(language != null && language != ""){
-			payload.language = language;
-			}
-			if(hasIssues != null && hasIssues != ""){
-			payload.has_issues = hasIssues;
-			}
-			if(hasWiki != null && hasWiki != ""){
-			payload.has_wiki = hasWiki;
-			}
-			mc.setPayloadJSON(payload);
-    	    ]]>
+            var scm = mc.getProperty('uri.var.scm');
+            var name = mc.getProperty('uri.var.name');
+            var isPrivate = mc.getProperty('uri.var.isPrivate');
+            var description = mc.getProperty('uri.var.description');
+            var forkingPolicy = mc.getProperty('uri.var.forkingPolicy');
+            var language = mc.getProperty('uri.var.language');
+            var hasIssues = mc.getProperty('uri.var.hasIssues');
+            var hasWiki = mc.getProperty('uri.var.hasWiki');
+            payload = mc.getPayloadJSON();
+            if(scm != null && scm != ""){
+            payload.scm = scm;
+            }
+            if(name != null && name != ""){
+            payload.name = name;
+            }
+            if(isPrivate != null && isPrivate != ""){
+            payload.is_private = isPrivate;
+            }
+            if(description != null && description != ""){
+            payload.description = description;
+            }
+            if(forkingPolicy != null && forkingPolicy != ""){
+            payload.fork_policy = forkingPolicy;
+            }
+            if(language != null && language != ""){
+            payload.language = language;
+            }
+            if(hasIssues != null && hasIssues != ""){
+            payload.has_issues = hasIssues;
+            }
+            if(hasWiki != null && hasWiki != ""){
+            payload.has_wiki = hasWiki;
+            }
+            mc.setPayloadJSON(payload);
+            ]]>
         </script>
         <call>
             <endpoint>

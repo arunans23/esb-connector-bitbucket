@@ -40,14 +40,14 @@
         <!-- Construct payload for optional parameters -->
         <script language="js">
             <![CDATA[
-			//payload variables
-			var closeSourceBranch = mc.getProperty("uri.var.closeSourceBranch");
-			payload = mc.getPayloadJSON();
-			if (closeSourceBranch != null && closeSourceBranch != "") {
-			payload.closeSourceBranch = eval("(" + closeSourceBranch + ")");
-			}
-			mc.setPayloadJSON(payload);	
-		    ]]>
+            //payload variables
+            var closeSourceBranch = mc.getProperty("uri.var.closeSourceBranch");
+            payload = mc.getPayloadJSON();
+            if (closeSourceBranch != null && closeSourceBranch != "") {
+            payload.closeSourceBranch = eval("(" + closeSourceBranch + ")");
+            }
+            mc.setPayloadJSON(payload);
+            ]]>
         </script>
         <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2"/>
         <call>

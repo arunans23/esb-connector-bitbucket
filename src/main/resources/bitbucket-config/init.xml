@@ -35,7 +35,6 @@
         <filter source="boolean(get-property('uri.var.apiUrl'))" regex="false">
             <then>
                 <property name="uri.var.apiUrl" value="https://bitbucket.org/api/2.0"/>
-
             </then>
             <else>
                 <property name="uri.var.apiUrl"
