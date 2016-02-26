@@ -46,7 +46,7 @@ public class BitbucketConnectorIntegrationTest extends ConnectorIntegrationTestB
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
 
-        init("bitbucket-connector-1.0.0");
+        init("bitbucket-connector-1.0.1-SNAPSHOT");
 
         esbRequestHeadersMap.put("Content-Type", "application/json");
 
